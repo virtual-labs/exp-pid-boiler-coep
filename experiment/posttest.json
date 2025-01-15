@@ -2,38 +2,137 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": " What is the primary function of a Programmable Logic Controller (PLC) in a boiler control system?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "To generate electrical power ",
+        "b": "To control the flow of water ",
+        "c": "To automate and monitor the boiler operation ",
+        "d": "To measure the temperature of steam"
+		
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following is a common input to a PLC in a boiler control system?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Level sensor ",
+        "b": "Pressure sensor ",
+        "c": "Flow sensor ",
+        "d": "All mentioned"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of a PID (Proportional-Integral-Derivative) controller in a heat exchanger control system?",
+      "answers": {
+        "a": "To control the flow rate of fluids ",
+        "b": "To regulate the temperature of fluids ",
+        "c": "To monitor the pressure of fluids ",
+        "d": "To generate alarms and warnings"
       },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Which of the following is a benefit of using a fully automated PLC-based control system for a boiler and heat exchanger?",
+      "answers": {
+        "a": "Increased labor costs ",
+        "b": "Decreased efficiency ",
+        "c": "Improved safety and reliability ",
+        "d": "Increased maintenance requirements"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the term for the process of adjusting the control algorithm of a PLC to achieve optimal performance?",
+      "answers": {
+        "a": "Tuning",
+        "b": "Calibration",
+        "c": "Configuration",
+        "d": "Programming"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+  
+  {
+      "question": "Which of the following is a type of communication protocol used in PLC-based control systems?",
+      "answers": {
+        "a": "RS-232 ",
+        "b": "Ethernet/IP ",
+        "c": "Mod bus",
+        "d": "All mentioned"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	
+  {
+      "question": "What is the purpose of a Human-Machine Interface (HMI) in a PLC-based control system for a boiler and heat exchanger?",
+      "answers": {
+        "a": "To monitor the system remotely ",
+        "b": "To program the PLC ",
+        "c": "To display real-time data and alarms ",
+        "d": "To control the system manually"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+  
+  
+  {
+      "question": "Which of the following is a safety feature that can be implemented in a PLC-based control system for a boiler and heat exchanger?",
+      "answers": {
+        "a": "Automatic shutdown on high pressure ",
+        "b": "Manual override of safety interlocks ",
+        "c": "Reduced speed operation on low water level ",
+        "d": "All mentioned"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+  
+  
+  {
+      "question": "What is the term for the process of simulating the operation of a PLC-based control system for testing and training purposes?",
+      "answers": {
+        "a": "Emulation",
+        "b": "Simulation",
+        "c": "Modeling ",
+        "d": "Virtualization"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+  
+  
+  {
+      "question": "Which of the following is a benefit of using a PLC-based control system for a boiler and heat exchanger in terms of data analysis?",
+      "answers": {
+        "a": "Limited data storage capacity",
+        "b": "In ability to analyze data in real-time",
+        "c": "Ability to generate reports and trends ",
+        "d": "Increased complexity in data analysis"
+      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+  
+  
   ]
 }

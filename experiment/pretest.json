@@ -2,38 +2,137 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary function of a boiler?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "To generate electricity ",
+        "b": "To produce compressed air ",
+        "c": "To heat water or produce steam",
+        "d": "To cool a process stream"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following is a type of heat exchanger?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Pump",
+        "b": "Turbine",
+        "c": "Shell and Tube ",
+        "d": "Generator"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of a superheater in a boiler?",
+      "answers": {
+        "a": "To increase the pressure of steam ",
+        "b": "To decrease the temperature of steam ",
+        "c": "To increase the temperature of steam ",
+        "d": "To decrease the pressure of steam"
       },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is the term for the transfer of heat between two fluids of different temperatures?",
+      "answers": {
+        "a": "Conduction",
+        "b": "Convection",
+        "c": "Radiation",
+        "d": "Heat Transfer"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which of the following is a characteristic of a fire-tube boiler?",
+      "answers": {
+        "a": "Water surrounds the tubes",
+        "b": "Tubes surround the water",
+        "c": "It uses a heat exchanger to heat water",
+        "d": "It uses a furnace to heat water"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the purpose of a economizer in a boiler?",
+      "answers": {
+        "a": "To increase the efficiency of the boiler",
+        "b": "To decrease the pressure of steam ",
+        "c": "To increase the temperature of steam ",
+        "d": "To decrease the temperature of steam"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which of the following types of heat exchangers is commonly used in oil refineries?",
+      "answers": {
+        "a": "Plate Heat Exchanger",
+        "b": "Shell and Tube",
+        "c": "Spiral Heat Exchanger",
+        "d": "Air Cooled Heat Exchanger"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the term for the ratio of heat transferred to the heat available?",
+      "answers": {
+        "a": "Efficiency",
+        "b": "Effectiveness",
+        "c": "Efficacy ",
+        "d": "Performance"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which type of heat exchanger is generally used to conduct basic experiments on heat exchange?",
+      "answers": {
+        "a": "Plate Heat Exchanger",
+        "b": "Shell and Tube ",
+        "c": "Spiral Heat Exchanger ",
+        "d": "Pipe in Pipe Heat Exchanger"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the purpose of a condenser in a heat exchanger system?",
+      "answers": {
+        "a": "To increase the pressure of steam",
+        "b": "To decrease the temperature of steam ",
+        "c": "To condense steam back into liquid ",
+        "d": "To increase the temperature of steam"
+      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+  
+  
+  
+  
+  
+  
+  
   ]
 }
