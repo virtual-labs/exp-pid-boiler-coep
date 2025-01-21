@@ -1130,7 +1130,7 @@ water.animate(
 	
 		  var ht1 = 0;
 	$("#startBtn").click(function() {
-		 $("#startBtn").prop("disabled",true);
+		
 		  $("#modelDialog1").addClass("modal-lg");
 		  $("#modelTitle1").html("Check the Components");
 		  var modelBody1=''
@@ -1140,6 +1140,7 @@ water.animate(
 			
 			
 		  $("#modelBody1").html(modelBody1);
+//		  $("#startBtn").prop("disabled",true);
 		 $("#reset").prop("disabled",true);
 		startP1.toBack();
 		startP2.toFront();
