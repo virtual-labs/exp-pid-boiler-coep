@@ -241,7 +241,7 @@ function BoilerHeatExchangerInstrument()
 					    +' </tbody>'
 						+'</table>'
 						+'</div>'
-						+"<img src='images/boilerHeatExchanger.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/boilerinstr.png' class='img-fluid' style='border-style: double;border-color: black;'>"
 						 $("#modelBody1").html(htm);
 						  $("#modelBody1").css("color","red"); 
 				  }
@@ -271,7 +271,7 @@ function BoilerHeatExchangerInstrument()
 			flag=1;
 			htm=''
 				+'<div class="col-sm-12" >'
-				+"<img src='images/boilerHeatExchanger.png' class='img-fluid' id='partB1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
+				+"<img src='images/boilerinstr.png' class='img-fluid' id='partB1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
 				+'</div>'
 			  $("#diagram").html(htm);
 			  $("#partB1").animate(
@@ -368,7 +368,7 @@ function BoilerHeatExchangerInstrument()
 	}
 	$("#nextLevel2").click(function(){
 		if(flag==1){
-			BoilerHeatExchangerPreQuestion();
+			BoilerSquActivites();
 		}
 	
 	});
