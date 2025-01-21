@@ -42,9 +42,16 @@ Fouling is the accumulation of unwanted material on solid surfaces which can con
 1.	Process Description:
 A pilot plant comprises of Electrical Boiler and Pipe in pipe type Heat Exchanger as shown in below picture. 
 
-![*Boiler_Heat_Exchanger* ](images/boiler_and_heat_exchanger_pilot_plant.png)
-![*Boiler_Heat_Exchanger* ](images/local_panel_for_boiler_and_heat_exchanger.png)
 ![*Boiler_Heat_Exchanger* ](images/boiler_heat_exchanger.png)
+
+![*Boiler_Heat_Exchanger* ](images/BOILER_HEAT-EXCHANGER.png)
+
+
+![*Boiler_Heat_Exchanger* ](images/boiler_and_heat_exchanger_pilot_plant.png)
+
+![*Boiler_Heat_Exchanger* ](images/local_panel_for_boiler_and_heat_exchanger.png)
+
+
 
 The boiler drum made up SS304 contains water which is electrically heated with a PWMcontroller and generates steam at 4 bar and 144° C. The water for heating is pumped from a boiler feed water tank using a positive displacement pump. The steam generated flows towards the heat exchanger through an equal percentage globe valve which controls the steam flow. 
 
