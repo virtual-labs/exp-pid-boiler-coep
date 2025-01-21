@@ -103,25 +103,18 @@ function BoilerHeatExchangerPiping()
 		+'</div>'
 	$("#Selection").html(htm);
 	htm=''
-		+'<div class="row statement" ><p>The spray drying process is a widely used technique for converting liquid feed into a dry powder form by rapidly drying with a hot gas.'
-		+'This method is commonly used in industries such as food processing, pharmaceuticals, chemicals, and ceramics. The objective'
-		+'of this task is to develop a comprehensive Piping and Instrumentation Diagram (P&ID) for a Spray Drying Process Plant that '
-		+'outlines the necessary equipment, instrumentation, control loops, and piping systems.'
-		+'<br><b> Problem Description</b><br>'
-		+'The spray drying process involves several critical stages such as atomization, drying, powder collection, and gas handling.'
-		+'A well-designed P&ID is required to ensure optimal control, safety, and efficient operation of the plant. The diagram should '
-		+'incorporate the flow of materials, energy, and signals, highlighting all relevant equipment such as pumps, compressors,'
-		+'heat exchangers, filters, and storage vessels, along with the associated instrumentation for monitoring and control.</p>'
-		
-		+'<br><b style="margin-bottom:10px;">The P&ID should include all major and minor process components and systems such as:</b><br>'
+		+'<div class="row statement" ><p>A problem statement is a crucial element in designing and developing a pilot plant. '
+		+'It defines the problem or opportunity that the pilot plant aims to address, and it serves as a guiding force throughout the project.'
+		+'Heres a general outline to help you define a problem statement for designing and developing a pilot plant:'
+		+'<br>Problem Statement: You are given the responsibility as an Instrumentation and Control Engineer to design and commission a pilot '
+		+'<br><b>A Boiler and Heat exchanger system to provide hot water at max 65°C and 800 lph</b>'
+		+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new “control and automation” technologies.'
+		+'<br><b>Key Performance Indicators (KPIs) :</b><br> You will be judged based on the accuracy of design, proper'
+		+'selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
+		+'<br><b>Constraints and Assumptions :</b><br> As you are an Instrumentation and Control Engineer process related details are'
+		+'not expected from you. You will receive the same from a process expert.</b></div>'
+		+'<div class="row"><img src="images/boilerheatExchanger.jpg" class="img img-responsive"></img></div>'
 
-		+'<p><span class="subTitle">Feed Preparation System:</span><br> Where liquid feed is prepared and conditioned before entering the spray dryer.'
-		+'<br><span class="subTitle">Atomization System:</span><br> Atomizers or nozzles that break the liquid feed into droplets for drying.'
-		+'<br><span class="subTitle">Drying Chamber:</span><br> A chamber where hot air or gas dries the atomized liquid into fine powder.'
-		+'<br><span class="subTitle">Air Handling System: </span><br>For controlling airflow and temperature inside the drying chamber.'
-		+'<br><span class="subTitle">Powder Recovery and Collection System:</span><br> Cyclones, filters, and receivers used to capture dried particles from the exhaust gas.'
-		+'<br><span class="subTitle">Exhaust Gas Handling System:</span><br> Includes fans, scrubbers, and filtration units to ensure environmental compliance.'
-		+'<br><span class="subTitle">Cooling/Storage: </span><br>Systems for cooling, storing, and packaging the dried product</p></div>'
 		$("#diagram").html(htm);
        var temp=0;
 	   var percentage=0;
@@ -241,7 +234,7 @@ function BoilerHeatExchangerPiping()
 							+'</div>'
 							+'</div>'
 
-						+"<img src='images/boilerHeatExchanger.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/boilerPiping.png' class='img-fluid' style='border-style: double;border-color: black;'>"
 					  
 						 $("#modelBody").html(htm);
 						  $("#modelBody").css("color","red");   
@@ -293,7 +286,7 @@ function BoilerHeatExchangerPiping()
 					addToMasterJson();
 					htm=''
 						+'<div class="col-sm-12" >'
-						+"<img src='images/boilerHeatExchanger.png' class='img-fluid' id='partA1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
+						+"<img src='images/boilerPiping.png' class='img-fluid' id='partA1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
 						+'</div>'
 						
 					$("#diagram").html(htm);

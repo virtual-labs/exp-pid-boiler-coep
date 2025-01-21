@@ -1,28 +1,127 @@
+		$("#simDemo").click(function () {
 
-	 $("#modelDialog").removeClass("modal-md");
-	 $("#modelDialog").addClass("modal-xl");
-	htm=''
-		+'<div class="row statement" ><p>The spray drying process is a widely used technique for converting liquid feed into a dry powder form by rapidly drying with a hot gas.'
-		+'This method is commonly used in industries such as food processing, pharmaceuticals, chemicals, and ceramics. The objective'
-		+'of this task is to develop a comprehensive Piping and Instrumentation Diagram (P&ID) for a Spray Drying Process Plant that '
-		+'outlines the necessary equipment, instrumentation, control loops, and piping systems.'
-		+'<br><b> Problem Description</b><br>'
-		+'The spray drying process involves several critical stages such as atomization, drying, powder collection, and gas handling.'
-		+'A well-designed P&ID is required to ensure optimal control, safety, and efficient operation of the plant. The diagram should '
-		+'incorporate the flow of materials, energy, and signals, highlighting all relevant equipment such as pumps, compressors,'
-		+'heat exchangers, filters, and storage vessels, along with the associated instrumentation for monitoring and control.</p>'
-		
-		+'<br><b style="margin-bottom:10px;">The P&ID should include all major and minor process components and systems such as:</b><br>'
-
-		+'<p><span class="subTitle">Feed Preparation System:</span><br> Where liquid feed is prepared and conditioned before entering the spray dryer.'
-		+'<br><span class="subTitle">Atomization System:</span><br> Atomizers or nozzles that break the liquid feed into droplets for drying.'
-		+'<br><span class="subTitle">Drying Chamber:</span><br> A chamber where hot air or gas dries the atomized liquid into fine powder.'
-		+'<br><span class="subTitle">Air Handling System: </span><br>For controlling airflow and temperature inside the drying chamber.'
-		+'<br><span class="subTitle">Powder Recovery and Collection System:</span><br> Cyclones, filters, and receivers used to capture dried particles from the exhaust gas.'
-		+'<br><span class="subTitle">Exhaust Gas Handling System:</span><br> Includes fans, scrubbers, and filtration units to ensure environmental compliance.'
-		+'<br><span class="subTitle">Cooling/Storage: </span><br>Systems for cooling, storing, and packaging the dried product</p></div>'
-		
-	$("#proStrBody").html(htm);
-//	htm=''
-//		+' Simulation Demo'
-//	$("#SimulationDemoBody").html(htm);
+			 $("#modelDialog").removeClass("modal-md");
+			 $("#modelDialog").removeClass("modal-sm");
+			 $("#modelDialog").removeClass("modal-xl");
+			 $("#modelDialog").addClass("modal-xl");
+			htm=''
+				+'<div class="row statement" ><p>A problem statement is a crucial element in designing and developing a pilot plant. '
+				+'It defines the problem or opportunity that the pilot plant aims to address, and it serves as a guiding force throughout the project.'
+				+'Heres a general outline to help you define a problem statement for designing and developing a pilot plant:'
+				+'<br>Problem Statement: You are given the responsibility as an Instrumentation and Control Engineer to design and commission a pilot '
+				+'<br><b>A Boiler and Heat exchanger system to provide hot water at max 65°C and 800 lph</b>'
+				+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new “control and automation” technologies.'
+				+'<br><b>Key Performance Indicators (KPIs) :</b><br> You will be judged based on the accuracy of design, proper'
+				+'selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
+				+'<br><b>Constraints and Assumptions :</b><br> As you are an Instrumentation and Control Engineer process related details are'
+				+'not expected from you. You will receive the same from a process expert.</b></div>'
+				+'<div class="row"><img src="images/boilerheatExchanger.jpg" class="img img-responsive"></img></div>'
+			$("#proStrBody").html(htm);
+			
+		});
+			$("#procedure").click(function () {
+				 $("#modelDialog").removeClass("modal-md");
+				 $("#modelDialog").removeClass("modal-sm");
+				 $("#modelDialog").removeClass("modal-xl");
+				 $("#modelDialog").addClass("modal-sm");
+//				$("#modalTitle").html("PROCEDURE");
+				htm=''
+					+'PROCEDURE '
+				$("#proStrBody").html(htm);
+			});
+			$("#tagDetails").click(function () {
+				 $("#modelDialog").removeClass("modal-md");
+				 $("#modelDialog").removeClass("modal-sm");
+				 $("#modelDialog").removeClass("modal-xl");
+				 $("#modelDialog").addClass("modal-md");
+//				$("#modalTitle").html("PROCEDURE");
+				htm=''
+					+'<table class="table table-bordered table-hover" style="font-size:larger;">'
+					+' <thead>'
+					+'<tr class="table-info">'
+					+'<th>Tag</th>'
+					+'<th>Tag Details</th>'
+					+'</tr>'
+					+'</thead>'
+					+' <tbody>'
+					+'<tr>'
+					+'<td>Drum Temperature </td>'
+					+'<td>TT01</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Steam Temperature </td>'
+					+'<td>TT02</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>HE Outlet Water Temperature </td>'
+					+'<td>TT03</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Inlet Water Temperature_HE </td>'
+					+'<td>TT04</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Boiler feed water Temperature_Condensor </td>'
+					+'<td>TT05</td>'
+					+'</tr>'
+					
+					+'<tr>'
+					+'<td>Boiler feed water Temperature</td>'
+					+'<td>TT06</td>'
+					+'</tr>'
+					
+					+'<tr>'
+					+'<td>Boiler Feed Water Flow Inf Feed Pump_101 </td>'
+					+'<td>FT1</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Steam Flow </td>'
+					+'<td>FT2</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Feed Water Flow HE Inlet </td>'
+					+'<td>FT3</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Steam Pressure Transmitter</td>'
+					+'<td>PT</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Control Valve</td>'
+					+'<td>FCV</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>Silicon Controlled Rectifier</td>'
+					+'<td>SCR</td>'
+					+'</tr>'
+					+'  <tr>'
+					+' <td> Mod Sov 1</td>'
+					+' <td>MSV1</td>'  
+					+'  </tr>'
+					+'  <tr>'
+					+' <td>Mod Sov 2</td>'
+					+' <td>MSV2</td>'  
+					+'  </tr>'
+					
+					+'  <tr>'
+					+' <td>Feed Pump Speed_Inlet(VFD_101)</td>'
+					+' <td>PY1</td>'
+					+'  </tr>'
+					+'  <tr>'
+					+' <td>	Feed Pump_HE_Water(VFD_201)</td>'
+					+' <td>PY2</td>'
+					+'  </tr>'
+				
+					+'  <tr>'
+					+' <td>Level Transmitter Drum</td>'
+					+' <td>LT</td>'
+					+'  </tr>'
+					
+					
+					
+					+'</tbody>'
+					+'</table>'
+				$("#proStrBody").html(htm);
+			});
+			
+			
