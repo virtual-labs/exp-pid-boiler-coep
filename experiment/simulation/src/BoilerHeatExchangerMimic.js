@@ -19,7 +19,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		+'<button id="datasheet" class="btn btn-danger" style="width:100%;margin-top:10px;" disabled>View Datasheet</button>'
 		+'</div>'
 		+'<div class="col-sm-6">'
-		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends"  >Trends </button>'
+		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends"  disabled >Trends </button>'
 		+'</div>'
 		+'</div>'
 		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
@@ -414,7 +414,7 @@ $("#diagram").html("");
 		y = 10;
 	var ht = -100;
  
-	time = 500;
+	time = 1000;
 
 //var arc = paper.path("M "+(x+200)+" "+(y+300)+" A 300 150 0 0 0 "+(x+700)+" "+(y+300)).attr({ 'stroke': '#000', 'stroke-width': 4});
 
