@@ -1,8 +1,13 @@
 
+var instrActualCount=0;
+
 function BoilerHeatExchangerInstrument()
 {
-	
-	
+	timerMasterJson.piping=$("#counter").text();
+	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
+	  
 	var InstrMasterJson = {};
 	var StdCompInstruCount=23;
 	var StdTTCount=6;
@@ -120,7 +125,7 @@ function BoilerHeatExchangerInstrument()
 		
 //		+'	  <!-- The Modal -->'
 		+'  <div class="modal fade " id="myModal1">'
-		+'    <div class="modal-dialog " id="modelDialog1">'
+		+'    <div class="modal-dialog modal-md" id="modelDialog1">'
 		+'	      <div class="modal-content">'
 //		+'	        <!-- Modal Header -->'
 		+'	        <div class="modal-header">'
@@ -153,6 +158,7 @@ function BoilerHeatExchangerInstrument()
 	   var flag=0;
 	$("#verifyInstr").click(function(){
 		
+		instrActualCount++;
 		 tt=parseInt($("#tt").val());
 		 pt=parseInt($("#pt").val());
 		 ft=parseInt($("#ft").val());
@@ -197,12 +203,11 @@ function BoilerHeatExchangerInstrument()
 			  }else {
 				  if(flag==0){
 					  $("#modelDialog1").addClass("modal-xl");
-					  $("#modelTitle1").html("Required configuration ");
-						htm=''
-					  
-						+'<div class="col-sm-12" >'
-						+'<center>REQUIRED COMPONENTS</center>'
-						+'</div>'
+					  $("#modelTitle1").html("");
+						htm=''	  
+//						+'<div class="col-sm-12" >'
+//						+'<center>REQUIRED COMPONENTS</center>'
+//						+'</div>'
 					  +'<div class="col-sm-12" >'
 						+'<table class="table table-striped table-bordered">'
 						+' <tbody>'
@@ -241,7 +246,7 @@ function BoilerHeatExchangerInstrument()
 					    +' </tbody>'
 						+'</table>'
 						+'</div>'
-						+"<img src='images/boilerinstr.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/boilerinstr.png' class='img-fluid' style='border-style: double;border-color: black;width:100%;'>"
 						 $("#modelBody1").html(htm);
 						  $("#modelBody1").css("color","red"); 
 				  }
@@ -365,6 +370,8 @@ function BoilerHeatExchangerInstrument()
 				
 		InstrMasterJson.Instrument=tempMasterJsonInstr;
 		console.log(InstrMasterJson);
+		resultJson.instrument=instrActualCount;
+		console.log(resultJson);
 	}
 	$("#nextLevel2").click(function(){
 		if(flag==1){
