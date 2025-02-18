@@ -1,5 +1,16 @@
+var startCount=0;
+var dataJson={};
+var startCount=0;
+var datasheetCount=0;
+var trendsCount=0;
+var selectedValue=1000;
+
 function BoilerHeatExchangerMimic(){
 
+	timerMasterJson.squences=$("#counter").text();
+	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
 $("#Header").html("	<center><span >SIMULATION</span></center>");
 	
 	htm=''
@@ -106,7 +117,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 
 		+'</div>'
 		+'<div class="col-sm-12">'
-		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-top:10px;width:100%"  >Next level </button>'
+		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-top:10px;width:100%">Result</button>'
 		+'</div>'
 		
 		
@@ -165,10 +176,12 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		
 	});
 $("#reset").click(function(){
+	
 	BoilerHeatExchangerDiagram();
 		
 	});
 $("#graph").click(function(){
+	trendsCount++;
 	BoilerGraph(arrayJson);
 		
 	});
@@ -182,7 +195,13 @@ $("#datasheet").click(function(){
     document.body.removeChild(link);
     datasheetCount++;
 	});
-
+$("#btnResult").click(function(){
+	resultJson.animationStart=startCount;
+	resultJson.datasheet=datasheetCount;
+	resultJson.trends=trendsCount;
+	console.log(resultJson);
+	result();
+});
 
 }
 //Json array 
@@ -304,8 +323,6 @@ var arrayJson = {
 	    130,130,130,130,130,130,130,130,130,130,130,130,130,129.5,129.5,129,129,128,127,121.66,121.66,114.16,114.16,99.16, 91.66, 
 	    84.16,91.66,99.16, 84.16,76.66, 69.16, 61.66, 61.66, 61.66, 61.66, 61.66, 61.66, 61.66, 61.66, 61.66,61.66,61.66,61.66,61.66,61.66,61.66,61.66,61.66],
 	    
-	    
-	    
 	    "TT3":[20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,21,
 	    22,24,25.33,26.83,28.33,29.83,31.33,32.83,34.33,35.83,37.33,
 	    38.83,40.33,40.33,40.33,40.33,40.33,40.33,40.33,40.33,40.33,
@@ -414,7 +431,7 @@ $("#diagram").html("");
 		y = 10;
 	var ht = -100;
  
-	time = 1000;
+	time = selectedValue;
 
 //var arc = paper.path("M "+(x+200)+" "+(y+300)+" A 300 150 0 0 0 "+(x+700)+" "+(y+300)).attr({ 'stroke': '#000', 'stroke-width': 4});
 
@@ -577,10 +594,6 @@ function fillWithTransition(rect, step) {
     
     var valveVerical =   paper.image("images/redValve.png", x+735, y+350, 50, 50).attr({ 'transform': 'r' + 270 });
     
-
-	
-
-	
 	tank(x+200, y+400);
 	tank(x+540, y+330);
 	tank(x+750, y+150);
@@ -651,11 +664,6 @@ water.animate(
     2000, // Duration in milliseconds
 //    'ease-in-out' // Easing function for smooth animation
 );
-
-	
-
-
-
 
 	var box =  paper.rect(x+220, y+273 , 129, 74 ,4).attr({  'fill': '#fff', // Black background
     'stroke': '#333', // Dark gray border
@@ -1131,17 +1139,84 @@ water.animate(
 		  var ht1 = 0;
 	$("#startBtn").click(function() {
 		
+		 startCount++;
 		  $("#modelDialog1").addClass("modal-lg");
 		  $("#modelTitle1").html("Check the Components");
 		  var modelBody1=''
 			  +'<b style="color:darkblue;">Before starting the plant check whether<br>- All valves are closed <br>' 
 			  +'- All pumps are switched off<br>- The instrument air, electricity,water ,steam demand and other required utilities are available <br>'
 			 +' - The production schedule mandates to produce  <br>'
-			
-			
-		  $("#modelBody1").html(modelBody1);
+			 $("#modelBody1").html(modelBody1);
+		  console.log(" start time out "+time);
+			  if(startCount>1){
+			   time = selectedValue;
+				 console.log(" start time in "+time);
+//				 console.log("selectedValue after start "+selectedValue);
+			  modelBody1+=''
+				 
+				  +' <div class="panel">'
+					 +' <h5>Set Simulation Time</h5>'
+					 +' <div class="form-check form-check-inline">'
+					 +'   <input class="form-check-input" type="radio" name="plantTime" id="twoMinutes" value="800">'
+					 +'   <label class="form-check-label radio-label" for="twoMinutes">2 min</label>'
+					 +'  </div>'
+				  +'  <div class="form-check form-check-inline">'
+				  +'    <input class="form-check-input" type="radio" name="plantTime" id="threeMinutes" value="900">'
+				  +'    <label class="form-check-label radio-label" for="threeMinutes">3 min</label>'
+				  +'  </div>'
+				  +'  <div class="form-check form-check-inline">'
+				  +'    <input class="form-check-input" type="radio" name="plantTime" id="fourMinutes" value="1000">'
+				  +'    <label class="form-check-label radio-label" for="fourMinutes">4 min</label>'
+				  +'  </div>'
+				  +'  <div class="form-check form-check-inline">'
+				  +'    <input class="form-check-input" type="radio" name="plantTime" id="fiveMinutes" value="1200">'
+				  +'    <label class="form-check-label radio-label" for="threeMinutes">5 min</label>'
+				  +'  </div>'
+				  +'  <div class="form-check form-check-inline">'
+				  +'    <input class="form-check-input" type="radio" name="plantTime" id="sixMinutes" value="1400">'
+				  +'    <label class="form-check-label radio-label" for="fourMinutes">6 min</label>'
+				  +'  </div>'
+//				  +'	  <div id="selectedTime">Selected Time: None</div>'
+				  +'	</div>'
+				  $("#modelBody1").append(modelBody1);
+		  }
+//		  $("#modelBody1").html(modelBody1);
 //		  $("#startBtn").prop("disabled",true);
 		 $("#reset").prop("disabled",true);
+		  $("#modelBody1").css({
+         'font-weight': '500',            // Add padding
+         'font-family': 'math',       // Font style
+         'font-size': '16px',          // Font size
+         'color': '#0c55a3'               // Text color
+     });
+
+$("#reset").prop("disabled",false);
+//$("#startBtn").prop("disabled",true);
+$("#datasheet").prop("disabled",true);
+// Stop any ongoing animations or timers
+const radioButtons = document.querySelectorAll('input[name="plantTime"]');
+const selectedTimeDiv = document.getElementById('selectedTime');
+
+// Add event listeners to each radio button
+radioButtons.forEach(radio => {
+radio.addEventListener('change', () => {
+//selectedTimeDiv.textContent = `Selected Time: ${radio.value}`;
+//console.log(${radio.value});
+selectedValue = $('input[name="plantTime"]:checked').val();
+//console.log("on change event "+selectedValue);
+time = selectedValue;
+//	 console.log(" start time "+time);
+//	 console.log("selectedValue after start "+selectedValue);
+//$('#selectedTime').text(`Selected Time: ${selectedValue}`);
+
+});
+});
+  
+//	  
+
+		
+		
+		
 		startP1.toBack();
 		startP2.toFront();
 		

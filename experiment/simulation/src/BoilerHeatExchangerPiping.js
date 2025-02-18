@@ -1,7 +1,10 @@
-
+ComponentMasterJson = {};
+timerMasterJson = {};
+resultJson={};
+var pipingActualCount=0;
 function BoilerHeatExchangerPiping()
 {
-	ComponentMasterJson = {};
+	
 	var StdCompPipingCount=12;
 	var StdTankCount=4;
 	var StdPumpCount=2;
@@ -39,21 +42,21 @@ function BoilerHeatExchangerPiping()
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of pumps</b></label>'
-		+' <input class="form-select" id="pumps" type="number" min="0" max="5" value="0" tabindex="1" ></input>'
+		+' <input class="form-select" id="pumps" type="number" min="0" max="5" value="0" tabindex="2" ></input>'
 		+'</div>' 
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of valves</b></label>'
-		+' <input class="form-select" id="valves"  type="number" min="0" max="5" value="0" tabindex="4" ></input>'
+		+' <input class="form-select" id="valves"  type="number" min="0" max="5" value="0" tabindex="3" ></input>'
 		+'</div>'
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of heat exchangers </b></label>'
-		+' <input class="form-select" id="heatex" type="number" min="0" max="5" value="0" tabindex="5" ></input>'
+		+' <input class="form-select" id="heatex" type="number" min="0" max="5" value="0" tabindex="4" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of boiler drum with heater</b></label>'
-		+' <input class="form-select" id="bdheater" type="number" min="0" max="5" value="0" tabindex="1" ></input>'
+		+' <input class="form-select" id="bdheater" type="number" min="0" max="5" value="0" tabindex="5" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
 		+'<label><b>Utilities</b></label>'
@@ -76,7 +79,7 @@ function BoilerHeatExchangerPiping()
 		
 //		+'	  <!-- The Modal -->'
 		+'  <div class="modal fade " id="myModal">'
-		+'    <div class="modal-dialog " id="modelDialog">'
+		+'    <div class="modal-dialog modal-md" id="modelDialog">'
 		+'	      <div class="modal-content">'
 //		+'	        <!-- Modal Header -->'
 		+'	        <div class="modal-header">'
@@ -123,6 +126,7 @@ function BoilerHeatExchangerPiping()
 	   var selectedValues;
 	   var selectedArray=[];
 	$("#verifyComponents").click(function(){
+		pipingActualCount++;
 		 percentage=0;
 		 tanks=parseInt($("#tanks").val());
 		 heatEx=parseInt($("#heatex").val());
@@ -165,15 +169,15 @@ function BoilerHeatExchangerPiping()
 				  if(flag==0){
 					  $("#modelDialog").removeClass("modal-md");
 					  $("#modelDialog").addClass("modal-xl");
-					  $("#modelTitle").html("Required configuration ");
+					  $("#modelTitle").html("");
 					  htm=''
 						  +'<div class="row">'
 						  +'<div class="col-sm-6" >'
 						+'<table class="table table-striped table-bordered">'
 						+' <tbody>'
-						+'    <tr class="table-dark text-dark">'
-						+'     <td colspan="2"><center>REQUIRED COMPONENTS</center></td>'
-						+'   </tr>'
+//						+'    <tr class="table-dark text-dark">'
+//						+'     <td colspan="2"><center>REQUIRED COMPONENTS</center></td>'
+//						+'   </tr>'
 						+'    <tr>'
 						+'     <td><center>TANKS</center></td>'
 						+'     <td><center>4</center></td>'
@@ -191,7 +195,6 @@ function BoilerHeatExchangerPiping()
 						+'     <td><center>1</center></td>'
 						+'   </tr>'
 						+'    <tr>'
-						
 						+'     <td><center>BOILER DRUM WITH HEATER</center></td>'
 						+'     <td><center>1</center></td>'
 						+'   </tr>'
@@ -292,9 +295,9 @@ function BoilerHeatExchangerPiping()
 					$("#diagram").html(htm);
 					 $("#partA1").animate(
 					          {
-					            width: "1000px",
-					            height: "700px",
-					           left: "+=100px",
+					            width: "70%",
+					            height: "65%",
+					           left: "+=30px",
 		//			            background-color:"red"
 					            
 					          },
@@ -363,6 +366,8 @@ function BoilerHeatExchangerPiping()
 		ComponentMasterJson.Component=tempMasterJsonComp;
 		ComponentMasterJson.Component.Utilities=selectedArray;
 		console.log(ComponentMasterJson);
+		resultJson.piping=pipingActualCount;
+		console.log(resultJson);
 	}
 	
 	$("#nextLevel1").click(function(){
