@@ -352,7 +352,7 @@ var arrayJson = {
 	    
 	    "FT1":[0,5,10,15,20,25,30,35,40,45,50,50,50,50,50,25,20,15,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,10,12.5,13.5,14.5,15.5,15.5,15.5,15.5,16,
 	    16.5,16.5,17,17.5,18,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5,18.5, 
-	    18, 17.5, 17, 16.5, 16.5, 16, 15.5, 15.5, 15.5, 15.5, 14.5, 13.5, 12.5, 10, 5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0],
+	    18, 17.5, 17, 16.5, 16.5, 16, 15.5, 15.5, 15.5, 15.5, 14.5, 13.5, 12.5, 10, 5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 	    
 	    "FT2":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3.6,4.2,5.1,5.7,6.39,7.08,7.77,8.46,9.15,9.84,10.53,11.22,11.91,
 	    12.6,13.29,13.98,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,14.67,
@@ -634,7 +634,7 @@ function fillWithTransition(rect, step) {
 	}, 200);
 	
 	var scrct =  paper.rect(x + 420, y + 270, 40, 80).attr({ 'stroke-width': '2' ,'fill':'#fff'});
-	var scaleCV =  paper.rect(x + 450, y + 80, 10, 60).attr({ 'stroke-width': '2' ,'fill':'#fff'});
+//	var scaleCV =  paper.rect(x + 450, y + 80, 10, 60).attr({ 'stroke-width': '2' ,'fill':'#fff'});
 	var fc = paper.path('M' + (x + 455) + ' ' + (y + 140) + 'l 0 0  ').attr({ 'stroke': 'green', 'stroke-width': '10' });
 //	levelc = fc.animate({
 //			path: "M" + (x+455 ) + " " + (y +140) + "  l 0  " + (-6) + "", 'stroke-width': '10', 'stroke': 'green', 'opacity': 0.5
@@ -1148,6 +1148,8 @@ water.animate(
 			 +' - The production schedule mandates to produce  <br>'
 			 $("#modelBody1").html(modelBody1);
 		  console.log(" start time out "+time);
+		  
+		  
 			  if(startCount>1){
 			   time = selectedValue;
 				 console.log(" start time in "+time);
@@ -1179,7 +1181,7 @@ water.animate(
 //				  +'	  <div id="selectedTime">Selected Time: None</div>'
 				  +'	</div>'
 				  $("#modelBody1").append(modelBody1);
-		  }
+		  
 //		  $("#modelBody1").html(modelBody1);
 //		  $("#startBtn").prop("disabled",true);
 		 $("#reset").prop("disabled",true);
@@ -1188,9 +1190,9 @@ water.animate(
          'font-family': 'math',       // Font style
          'font-size': '16px',          // Font size
          'color': '#0c55a3'               // Text color
-     });
+      });
 
-$("#reset").prop("disabled",false);
+//$("#reset").prop("disabled",false);
 //$("#startBtn").prop("disabled",true);
 $("#datasheet").prop("disabled",true);
 // Stop any ongoing animations or timers
@@ -1205,17 +1207,22 @@ radio.addEventListener('change', () => {
 selectedValue = $('input[name="plantTime"]:checked').val();
 //console.log("on change event "+selectedValue);
 time = selectedValue;
-//	 console.log(" start time "+time);
+	 console.log(" start time "+time);
 //	 console.log("selectedValue after start "+selectedValue);
 //$('#selectedTime').text(`Selected Time: ${selectedValue}`);
 
+
 });
+});
+
+}
+
 });
   
 //	  
 
 		
-		
+$("#myModal1").on("hidden.bs.modal", function () {		
 		
 		startP1.toBack();
 		startP2.toFront();
@@ -1512,6 +1519,17 @@ time = selectedValue;
 	}
 	
 	});
+	
+	
+	  
+  stopSavingValues =  function () {
+  					if (dataInterval) {
+   					 clearInterval(dataInterval);
+  					  console.log("Saving values stopped.");
+ 				 } else {
+    				console.log("No active interval to stop.");
+                 }
+          }
 	
 	
 	}
