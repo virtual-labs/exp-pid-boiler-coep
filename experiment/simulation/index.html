@@ -55,6 +55,7 @@
 		 <button type="button" id="tagDetails" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Tag Details </b></button>
 	     <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Problem statement</b> </button>
 		    <button type="button" id="procedure" class="btn btn-danger btn1 button1" data-toggle="modal" data-target="#proStr"><b>Procedure </b></button>
+		    <button type="button" class="btn btn-danger btn1 button1"  id="report" style="margin-top:10px;"  hidden>Download report </button> 
 	     </div>
 	     
 	   
@@ -83,8 +84,6 @@
 	     
  	</div>
  	  
- 	
- 	
     <div class="row titlePart" id="Header" ></div>
 
 	<div class="container-fluid" style="margin-top:10px; " id="mainDiv" >
@@ -139,8 +138,7 @@ Copyrights &copy; COEPTECH - Virtual Labs
 <script>
 $( document ).ready(function() {
 	BoilerHeatExchangerPiping();
-// 	BoilerSquActivites();
-//  BoilerHeatExchangerMimic();
+ //  BoilerHeatExchangerMimic();
 });
 </script>
 <script>
@@ -161,15 +159,27 @@ toastr.options = {
         'hideMethod': 'fadeOut',
         'margin-bottom':'50%'
     }
-     
     
-     
 </script>
 <script >
 $("#coepLogo").click(function(evt) {
 	
 	 $('#coepLogo').off('click');
 });
+
+$('#report').on('click', function() {
+			$('#report').prop("hidden",true);
+		    html2canvas(document.querySelector("#mainDiv")).then(canvas => {
+		        // Append the screenshot canvas to the body
+		        document.body.appendChild(canvas);
+		        $("canvas").css("display","none");
+		        // Optionally save the screenshot as an image
+		        var link = document.createElement('a');
+		        link.download = 'BoilerHeatExchanger_report.png';
+		        link.href = canvas.toDataURL();
+		        link.click();
+		    });
+		});
 
 </script>
 </html>

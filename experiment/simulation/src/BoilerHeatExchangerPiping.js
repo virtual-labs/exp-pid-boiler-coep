@@ -110,7 +110,7 @@ function BoilerHeatExchangerPiping()
 		+'It defines the problem or opportunity that the pilot plant aims to address, and it serves as a guiding force throughout the project.'
 		+'Heres a general outline to help you define a problem statement for designing and developing a pilot plant:'
 		+'<br>Problem Statement: You are given the responsibility as an Instrumentation and Control Engineer to design and commission a pilot '
-		+'<br><b>A Boiler and Heat exchanger system to provide hot water at max 65°C and 800 lph</b>'
+		+'<br><b>A Boiler and Heat exchanger system to provide hot water at max 45°C and 600 lph</b>'
 		+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new “control and automation” technologies.'
 		+'<br><b>Key Performance Indicators (KPIs) :</b><br> You will be judged based on the accuracy of design, proper'
 		+'selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
