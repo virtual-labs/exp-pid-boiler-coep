@@ -1,19 +1,24 @@
+## Procedure
+
 #### Piping Diagram Configuration:
 - Configure all parameters for the piping diagram. In which you need to identify vessels and equipment to run the plant
 - Click on the "Verify Components" button
 - If all configuration parameters are correct, the "Next Level" button will be visible.
 - Click on the "Next Level" button to proceed
+
 #### Instrument Diagram Configuration:
 - Follow the same steps as above to configure the instrument diagram. In this you will have identify the instruments required to run the plant
 - Click on the "Verify Instruments" button
 - If all configuration parameters are correct, the "Next Level" button will be visible
 - Click on the "Next Level" button to continue
+
 #### Sequence of Activities:
 - Read the “Prior Knowledge Assessment” statements carefully
 - Enter the appropriate sequence number in the provided text box. The system will not allow you to write the duplicate numbers. Hence be careful
 - Click on the "Submit" button
 - You have three attempts to verify whether the sequence is correct or otherwise
 - Try for three times and then proceed to the Simulation section
+
 #### Simulation Execution:
 - Click on the "Start" button to begin the simulation
 - The first time setting runs for 5 minutes by default
