@@ -1,10 +1,10 @@
 ## Theory
 
-A boiler is an enclosed vessel that provides a means for combustion heat to be transferred into water until it becomes heated water or steam. The hot water or steam under pressure is then usable for transferring the heat to a process. Water is a useful and cheap medium for transferring heat to a process. When water is boiled into steam its volume increases about 1,600 times, producing a force that is almost as explosive as gunpowder. This causes the boiler to be extremely dangerous equipment that must be treated with utmost care.[1]. The process of heating a liquid until it reaches its gaseous state is called evaporation. Heat is transferred from one body to another by means of radiation, which is the transfer of heat from a hot body to a cold body without a conveying medium, convection, the transfer of heat by a conveying medium, such as air or water and conduction, transfer of heat by actual physical contact, molecule to molecule.
+A boiler is an enclosed vessel that provides a means for combustion heat to be transferred into water until it becomes heated water or steam. The hot water or steam under pressure is then usable for transferring the heat to a process. Water is a useful and cheap medium for transferring heat to a process. When water is boiled into steam its volume increases about 1,600 times, producing a force that is almost as explosive as gunpowder. This causes the boiler to be extremely dangerous equipment that must be treated with utmost care. The process of heating a liquid until it reaches its gaseous state is called evaporation. Heat is transferred from one body to another by means of radiation, which is the transfer of heat from a hot body to a cold body without a conveying medium, convection, the transfer of heat by a conveying medium, such as air or water and conduction, transfer of heat by actual physical contact, molecule to molecule.
 
 - Boiler Make & Year: Non IBR Boiler & 2012
 
-- MCR(Maximum Continuous Rating) : 30Kg/hr
+- MCR(Maximum Continuous Rating) : 30 Kg/hr
 
 - Rated Working Pressure: 3.5 Bar
 
@@ -55,7 +55,7 @@ A pilot plant comprises of Electrical Boiler and Pipe in pipe type Heat Exchange
 
 
 
-The boiler drum made up SS304 contains water which is electrically heated with a PWMcontroller and generates steam at 4 bar and 144° C. The water for heating is pumped from a boiler feed water tank using a positive displacement pump. The steam generated flows towards the heat exchanger through an equal percentage globe valve which controls the steam flow. 
+The boiler drum made up SS304 contains water which is electrically heated with a PWMcontroller and generates steam at 4 bar and 144 °C. The water for heating is pumped from a boiler feed water tank using a positive displacement pump. The steam generated flows towards the heat exchanger through an equal percentage globe valve which controls the steam flow. 
 
 The heat exchanger being of tubular counter flow type, water to be heated is pumped from a cold water tank from the other end using a centrifugal pump. The condensate formed in the heat exchanger during heat transfer is collected in a separate condensate tank. The hot water is collected in hot water tank which also be either mixed in the cold water tank or can be added partially/fully to the feed to the boiler to change the feed water temperature.
 
@@ -82,11 +82,11 @@ These components ensure process safety which generally refers to the prevention 
 
 #### a. Pressure switch and temperature switch: 
 
-Shuts off the boiler if drum pressure/temperature exceeds 4 bar/144° C.
+Shuts off the boiler if drum pressure/temperature exceeds 4 bar/144 °C.
 
 #### b. Low level switches: 
 
-For the boiler drum this switch, shuts o_ the heater if there is no water in the drum. For other tanks these switches are used to avoid dry running of pumps if there is nothing to pump in the tanks.
+For the boiler drum this switch, shuts off the heater if there is no water in the drum. For other tanks these switches are used to avoid dry running of pumps if there is nothing to pump in the tanks.
 
 #### c. High level switches:
 
