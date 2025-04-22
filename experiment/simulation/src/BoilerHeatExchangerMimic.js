@@ -3,7 +3,7 @@ var dataJson={};
 var startCount=0;
 var datasheetCount=0;
 var trendsCount=0;
-var selectedValue=1000;
+var selectedValue=100;
 
 function BoilerHeatExchangerMimic(){
 
@@ -176,7 +176,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		
 	});
 $("#reset").click(function(){
-	
+	//$("#startBtn").prop("disabled",false);
 	BoilerHeatExchangerDiagram();
 		
 	});
@@ -1231,7 +1231,7 @@ $("#myModal1").on("hidden.bs.modal", function () {
 		  delay = 100; 
 		tank_empty(x+225, y+460);
 		water_supply_part1(x,y);
-		
+		//$("#startBtn").prop("disabled",true);
 		
 
 	
