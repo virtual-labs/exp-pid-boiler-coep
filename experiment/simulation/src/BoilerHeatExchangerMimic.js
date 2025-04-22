@@ -3,7 +3,7 @@ var dataJson={};
 var startCount=0;
 var datasheetCount=0;
 var trendsCount=0;
-var selectedValue=100;
+var selectedValue=1000;
 
 function BoilerHeatExchangerMimic(){
 
