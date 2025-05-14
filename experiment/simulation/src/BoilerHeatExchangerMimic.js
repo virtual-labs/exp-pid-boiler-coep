@@ -1,6 +1,6 @@
 var startCount=0;
 var dataJson={};
-var startCount=0;
+//var startCount=0;
 var datasheetCount=0;
 var trendsCount=0;
 var selectedValue=1000;
@@ -8,7 +8,7 @@ var selectedValue=1000;
 function BoilerHeatExchangerMimic(){
 
 	timerMasterJson.squences=$("#counter").text();
-	console.log(timerMasterJson);
+	//console.log(timerMasterJson);
 	seconds = 0;
 	  updateCounter();
 $("#Header").html("	<center><span >SIMULATION</span></center>");
@@ -46,27 +46,27 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		+'<tbody>'
 		+' <tr>'
 		+'   <td><label><b>TT1</b></label></td>'
-		+'   <td><label class="PMCValue" id="tt1">0</label>°C</td>'
+		+'   <td><label class="PMCValue" id="tt1">0</label><sup>o</sup>C</td>'
 		+'  </tr>'
 		+'  <tr>'
 		+' <td><label><b>TT2 </b></label></td>'
-		+' <td><label class="PMCValue" id="tt2">0</label>°C</td>'
+		+' <td><label class="PMCValue" id="tt2">0</label><sup>o</sup>C</td>'
 		+'  </tr>'
 		+'  <tr>'
 		+' <td><label><b>TT3 </b></label></td>'
-		+' <td><label class="PMCValue" id="tt3">0</label>°C</td>'
+		+' <td><label class="PMCValue" id="tt3">0</label><sup>o</sup>C</td>'
 		+'  </tr>'
 		+'  <tr>'
 		+' <td><label><b>TT4 </b></label></td>'
-		+' <td><label class="PMCValue" id="tt4">0</label>°C</td>'
+		+' <td><label class="PMCValue" id="tt4">0</label><sup>o</sup>C</td>'
 		+'  </tr>'
 		+'  <tr>'
 		+' <td><label><b>TT5 </b></label></td>'
-		+' <td><label class="PMCValue" id="tt5">0</label>°C</td>'
+		+' <td><label class="PMCValue" id="tt5">0</label><sup>o</sup>C</td>'
 		+'  </tr>'
 		+'  <tr>'
 		+' <td><label><b> TT6</b></label></td>'
-		+' <td><label class="PMCValue" id="tt6">0</label>°C</td>'
+		+' <td><label class="PMCValue" id="tt6">0</label><sup>o</sup>C</td>'
 		+'  </tr>'
 		+'  <tr>'
 		+' <td><label><b>FT1</b></label></td>'
@@ -117,7 +117,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 
 		+'</div>'
 		+'<div class="col-sm-12">'
-		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-top:10px;width:100%">Result</button>'
+		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-top:10px;width:100%" disabled>Result</button>'
 		+'</div>'
 		
 		
@@ -176,7 +176,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		
 	});
 $("#reset").click(function(){
-	//$("#startBtn").prop("disabled",false);
+	
 	BoilerHeatExchangerDiagram();
 		
 	});
@@ -412,7 +412,7 @@ function BoilerHeatExchangerDiagram() {
 
 //	$('#canvas-div').removeAttr('width');
 //	$('#canvas-div').removeAttr('height');
-	var w = 1200;
+	var w = 1300;
 	var h = 1000;
 $("#diagram").html("");
 	var width = $(window).width();
@@ -1147,12 +1147,12 @@ water.animate(
 			  +'- All pumps are switched off<br>- The instrument air, electricity,water ,steam demand and other required utilities are available <br>'
 			 +' - The production schedule mandates to produce  <br>'
 			 $("#modelBody1").html(modelBody1);
-		  console.log(" start time out "+time);
+		//  console.log(" start time out "+time);
 		  
 		  
 			  if(startCount>1){
 			   time = selectedValue;
-				 console.log(" start time in "+time);
+				 //console.log(" start time in "+time);
 //				 console.log("selectedValue after start "+selectedValue);
 			  modelBody1+=''
 				 
@@ -1183,8 +1183,10 @@ water.animate(
 				  $("#modelBody1").append(modelBody1);
 		  
 //		  $("#modelBody1").html(modelBody1);
-//		  $("#startBtn").prop("disabled",true);
+		 // $("#startBtn").prop("disabled",true);
 		 $("#reset").prop("disabled",true);
+		 $("#datasheet").prop("disabled",true);
+		 $("#graph,#btnResult").prop("disabled",true);
 		  $("#modelBody1").css({
          'font-weight': '500',            // Add padding
          'font-family': 'math',       // Font style
@@ -1194,7 +1196,8 @@ water.animate(
 
 //$("#reset").prop("disabled",false);
 //$("#startBtn").prop("disabled",true);
-$("#datasheet").prop("disabled",true);
+ $("#graph").prop("disabled",true);
+$("#datasheet,#btnResult").prop("disabled",true);
 // Stop any ongoing animations or timers
 const radioButtons = document.querySelectorAll('input[name="plantTime"]');
 const selectedTimeDiv = document.getElementById('selectedTime');
@@ -1223,7 +1226,7 @@ time = selectedValue;
 
 		
 $("#myModal1").on("hidden.bs.modal", function () {		
-		
+		$("#startBtn").prop("disabled",true);
 		startP1.toBack();
 		startP2.toFront();
 		
@@ -1231,7 +1234,7 @@ $("#myModal1").on("hidden.bs.modal", function () {
 		  delay = 100; 
 		tank_empty(x+225, y+460);
 		water_supply_part1(x,y);
-		//$("#startBtn").prop("disabled",true);
+		
 		
 
 	
@@ -1470,11 +1473,11 @@ $("#myModal1").on("hidden.bs.modal", function () {
 	
 	if(arrayJson.MSV2[i] >= 10){
 		hot(x,y);
-		valve2.remove();
+//		valve2.remove();
 		valve2 = paper.image("images/svValveH2G.png", x+305, y+650, 50, 50).attr({ 'transform': 'r' + 270 });
 //		valve2.toBack();
 	}else{
-		valve2.remove();
+//		valve2.remove();
 		valve2 = paper.image("images/redValve.png", x+305, y+650, 50, 50).attr({ 'transform': 'r' + 270 });
 		
 		  
@@ -1483,12 +1486,12 @@ $("#myModal1").on("hidden.bs.modal", function () {
 	
 	
 	if(arrayJson.MSV1[i] > 0){
-		valve1.remove();
+//		valve1.remove();
 		 valve1 = paper.image("images/svValveH2G.png", x+270, y+595, 50, 50).toFront();
 //		 valve1.toBack();
 		
 	}else{
-		valve1.remove();
+//		valve1.remove();
 		
 		valve1 = paper.image("images/redValve.png", x+270, y+595, 50, 50);
 //		valve1.toBack();
@@ -1512,7 +1515,7 @@ $("#myModal1").on("hidden.bs.modal", function () {
 	 startP3.toBack();
 	 $("#reset").prop("disabled",false);
 	 $("#startBtn").prop("disabled",true);
-	 $("#graph,#datasheet").prop("disabled",false);
+	 $("#graph,#datasheet,#btnResult").prop("disabled",false);
 //	startP3.toFront();
  }
  },i*2.5*time);

@@ -281,9 +281,9 @@ function BoilerHeatExchangerInstrument()
 			  $("#diagram").html(htm);
 			  $("#partB1").animate(
 			          {
-			            width: "1000px",
-			            height: "700px",
-			            left: "+=100px",
+			            width: "90%",
+			            height: "90%",
+			            //left: "+=100px",
 			          },
 			          1000,
 			          
