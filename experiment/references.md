@@ -25,11 +25,6 @@
 -	American Society of Mechanical Engineers (ASME). (2019). ASME Boiler and Pressure Vessel Code. New York: ASME.
 -	National Board of Boiler and Pressure Vessel Inspectors (NBBI). (2020). National Board Inspection Code. Columbus, OH: NBBI.
 
-#### Online Resources:
-
--	Boiler and Heat Exchanger Manufacturers Association (BHEMA). (n.d.). Boiler and Heat Exchanger Design and Operation. Retrieved from https://www.bhema.org/design-operation/
--	Heat Exchanger World. (n.d.). Heat Exchanger Design and Optimization. Retrieved from https://www.heatexchangerworld.com/design-optimization/
-
 
 #### Thesis and Dissertations:
 
