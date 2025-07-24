@@ -1,6 +1,6 @@
 ## Aim 
 
-Design and development of automation strategy for "Boiler and Heat Exchanger" pilot plant
+To design and development of P & I Diagram and automation strategy for boiler and heat exchanger pilot plant
 
 ## Objectives  
 

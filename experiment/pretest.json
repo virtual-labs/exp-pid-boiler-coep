@@ -130,9 +130,9 @@
   	{
       "question": "This picture depicts which process loop component ? $\\\\$ <img src='./images/control.png'></img>",
       "answers": {
-        "a": "control Valve",
-        "b": " 3  way control valve",
-        "c": "Butterfly valve ",
+        "a": "Pneumatically operated diphragm control valve",
+        "b": "3 way control valve",
+        "c": "Butterfly valve",
         "d": "Solenoide valve"
       },
      
